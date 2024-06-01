@@ -1,6 +1,6 @@
 
 const clientId = '1246414303977013258';
-const redirectUri = 'http://127.0.0.1:8080/';
+const redirectUri = 'https://criadormods.github.io/discord-callback-auth/';
 const scopes = 'identify';
 
 document.addEventListener('DOMContentLoaded', () => {
