@@ -48,7 +48,6 @@ function fetchUserInfo(token) {
     const status = document.getElementById('status');
     const profile = document.getElementById('profile');
     const avatar = document.getElementById('avatar');
-    const username = document.getElementById('username');
 
     fetch('https://discord.com/api/users/@me', {
         headers: {
@@ -59,7 +58,6 @@ function fetchUserInfo(token) {
     .then(data => {
         status.textContent = `Hello, ${data.username}#${data.discriminator}`;
         avatar.src = `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`;
-        username.textContent = `${data.username}#${data.discriminator}`;
         loginBtn.style.display = 'none';
         logoutBtn.style.display = 'inline-block';
         profile.style.display = 'block';
